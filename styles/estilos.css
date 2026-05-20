@@ -1,0 +1,189 @@
+body{
+    margin: 0px;   
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(section):not(body):not(header):not(html):not(span):not(a):not(b):not(input):not(img) {
+  padding: 10px;
+}
+
+:root{
+    --boxsizing: border-box; /* Todo el diseño debe realizarse en box-sizing: border-box */
+    --paddingSection: 12px; /* Todas las secciones (SECTION) deben tener un padding de 12px arriba y abajo */
+    --paddingH1: 30px 0px; /* Todos los H1 deben tener un padding de 30px, arriba y abajo */
+    --marginControls: 10px; /* Margen de 10px, arriba y abajo, para todos los controles input (text, submit) */
+    --anchoCartas: 180px; /* Ancho de 180px para las CARTAS (Guardería, Campo y Zoológico) */
+
+    /* Colores */
+    --azul: #209dc7;
+    --naranja: hsl(40, 97%, 50%);
+    --negro: #000;
+    --gris: #EEE;
+    --blanco: #FFF;
+
+    /* Tipografia */
+    --fuentePrincipal: Verdana;
+    --tamanoUno: 1rem;
+    --tamanoDos: 0.8rem;
+    --estiloTipografia: bold;
+
+    /* Espaciado */
+    --paddingEspaciado: 10px;
+
+    /* Borde y Sombras */
+    --bordeS: 4px solid var(--naranja);
+    --redondeado: 25px;
+    --sombras: 6px 6px 15px var(--gris);
+ }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.Azul{
+    color: var(--azul);
+}
+
+.Naranja{
+    color: var(--naranja);
+}
+
+.Blanco{
+    color: var(--blanco);
+}
+
+.Letra{
+    font-weight: var(--estiloTipografia);
+    font-family: var(--fuentePrincipal);
+    padding: var(--paddingH1);
+}
+
+.LetraUno{
+    font-size: var(--tamanoUno);
+    font-weight: var(--estiloTipografia);
+    font-family: var(--fuentePrincipal);
+}
+
+.LetraDos{
+    font-size: var(--tamanoDos);
+    font-family: var(--fuentePrincipal);
+}
+
+/* Quitar los puntos de la lista */
+.ListaNoOrd {
+    list-style: none;
+    padding: var(--paddingEspaciado);
+    margin: 0;
+}
+
+/* Quitar subrayado y controlar color */
+.ListaNoOrd a {
+    text-decoration: none;
+}
+
+/* Evitar color morado después de hacer click */
+.ListaNoOrd a:visited {
+    color: inherit;
+}
+
+/* Opcional: mantener mismo estilo al pasar el mouse */
+.ListaNoOrd a:hover {
+    text-decoration: none;
+}
+
+.contenedorNav{
+    display: flex;
+}
+
+.contenedorHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--paddingEspaciado);
+    box-shadow: var(--sombras);
+}
+
+.carta{
+    box-sizing: var(--boxsizing);
+    width: var(--anchoCartas);
+    padding: var(--paddingEspaciado);
+    border-radius: var(--redondeado);
+}
+
+.centrarObjetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imgCarta{
+    border: var(--bordeS);
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+}
+
+.imgCarta:hover {
+    transform: scale(1.05);
+}
+
+.contenedorCartas{
+    display: flex;
+    gap: var(--paddingEspaciado);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.secciones{
+    padding: var(--paddingSection) 0px;
+}
+
+.contenedorOpiniones{
+    display: flex;
+    gap: var(--paddingEspaciado);
+    justify-content: space-around;
+}
+
+.contenedorContactenos{
+    display: flex;
+    gap: var(--paddingEspaciado);
+    justify-content: space-around;
+    background: var(--negro);
+}
+
+.seccionOpiniones{
+    background: var(--gris);
+}
+
+.cabecera{
+    background: var(--azul);
+}
+
+.footer{
+    background: var(--naranja);
+}
+
+.inputtext{
+    background: var(--blanco);
+    margin: var(--marginControls) 0px;
+    border-radius: var(--redondeado);
+    padding: var(--paddingEspaciado);
+    width: 100%;
+}
+
+.btnContactar{
+    background: var(--naranja);
+    color: var(--blanco);
+    text-align: center;
+    border-radius: var(--redondeado);
+    padding: var(--paddingEspaciado);
+    width: 100%;
+}
